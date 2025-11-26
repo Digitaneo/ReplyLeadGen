@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ReplyLeadGen - AI Sales Engagement Platform</title>
+    <!-- Tailwind CSS CDN is kept for simplicity to avoid complex PostCSS setup for the user -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <script>
@@ -114,7 +115,9 @@
     "react": "https://aistudiocdn.com/react@^19.2.0",
     "framer-motion": "https://aistudiocdn.com/framer-motion@^12.23.24",
     "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
-    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0"
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
+    "vite": "https://aistudiocdn.com/vite@^7.2.4",
+    "@vitejs/plugin-react": "https://aistudiocdn.com/@vitejs/plugin-react@^5.1.1"
   }
 }
 </script>
@@ -122,5 +125,6 @@
   <body>
     <div class="global-bg"></div>
     <div id="root"></div>
+    <script type="module" src="./index.tsx"></script>
   </body>
 </html>

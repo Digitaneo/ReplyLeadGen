@@ -1,20 +1,30 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# ReplyLeadGen Landing Page
 
-# Run and deploy your AI Studio app
+## كيفية استخدام الموقع على استضافتك الخاصة
 
-This contains everything you need to run your app locally.
+هذا الموقع مبني باستخدام React. لرفعه على استضافة (مثل cPanel أو أي استضافة مشتركة)، يجب عليك "بناء" (Build) المشروع لتحويل الكود البرمجي إلى ملفات HTML/CSS/JS جاهزة للمتصفح.
 
-View your app in AI Studio: https://ai.studio/apps/drive/1tCf-2Az91cr_uVfjnnbd6ntgQYDj57Et
+### المتطلبات
+*   تأكد من تثبيت [Node.js](https://nodejs.org/) على جهاز الكمبيوتر الخاص بك.
 
-## Run Locally
+### خطوات التثبيت والبناء
 
-**Prerequisites:**  Node.js
+1.  **تحميل المشروع**: قم بفك ضغط الملفات في مجلد على جهازك.
+2.  **فتح التيرمينال (Terminal)**: افتح موجه الأوامر داخل مجلد المشروع.
+3.  **تثبيت المكاتب**: اكتب الأمر التالي واضغط Enter:
+    ```bash
+    npm install
+    ```
+4.  **بناء المشروع**: بعد انتهاء التثبيت، اكتب الأمر التالي:
+    ```bash
+    npm run build
+    ```
+    
+### الرفع على الاستضافة
 
+*   بعد نجاح عملية البناء، سيظهر مجلد جديد في مشروعك اسمه **`dist`**.
+*   هذا المجلد يحتوي على ملف `index.html` ومجلد `assets`.
+*   **قم برفع محتويات مجلد `dist` فقط** إلى مدير الملفات (File Manager) في استضافتك (عادة داخل مجلد `public_html`).
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+### ملاحظة هامة
+لقد تم إعداد المشروع ليعمل بأي مسار (Relative Paths)، مما يعني أنك تستطيع وضعه في النطاق الرئيسي (مثلاً `site.com`) أو في مجلد فرعي (مثلاً `site.com/landing`) وسيعمل بدون مشاكل.
